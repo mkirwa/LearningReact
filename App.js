@@ -4,8 +4,6 @@ import './App.css';
 
 function App() {
   return (
-    //This is a markup
-    //Its neither a string nor html
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />

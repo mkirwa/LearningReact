@@ -6,7 +6,10 @@ class Counter extends Component {
     };
 
     handleIncrement = () =>{
-        console.log('Increment Clicked',this);
+        //setState tells react we are updating the state upon being clicked
+        //inside setState, you have to pass an object and the properties of 
+        //that object. In this case count and this.state.count
+        this.setState({count: this.state.count+1});
     }
 
     render() { 

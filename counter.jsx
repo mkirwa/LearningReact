@@ -2,37 +2,47 @@ import React, { Component } from 'react';
 //component class has methods that will be inherited in counter class
 class Counter extends Component {
     state = {
-        count:0, tags:['tag1','tag2','tag3']
+        count: 0
     };
-    
+
+    constructor(){
+        super();
+        //bind method returns a new instance of the handle increment function 
+        //in this function. This is always referencing the current object 
+        //So no matter how that function is called, this is not going to change.
+        //it is always representing the counter object 
+        this.handleIncrement.bind(this);
+    }
+
+    handleIncrement(){
+        console.log('Increment Clicked',this);
+    }
+
     render() { 
-        //includes any data that this component needs 
-        //it could have an address, a street property or anything this component needs 
-        //const classes includes all the data that we will pass in span
-        //start with primary classes that we want to have in all cases
-        //this render method is about determing the class for this label
-        
         return(
             <div>
-                <span className = {this.getBadgeClasses()}>{this.formatCount()}</span>
-                <button className = "btn btn-secondary btn-sm" >Increment</button>
-                <ul>
-                    {this.state.tags.map(tag => <li key={tag}>{tag}</li>)}
-                </ul>
+                <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
+                <button 
+                onClick={this.handleIncrement} 
+                className="btn btn-secondary btn-sm">
+                    Increment
+                </button>
             </div>
             );
     }
+    
     getBadgeClasses() {
-        let classes = "badge m-2 badge-";
-        classes += this.state.count === 0 ? "warning" : "primary";
-        return classes;
+        let classes = "badge m2 badge-";
+        classes += this.state.count === 0? "warning" : "primary";
+        return classes; 
     }
-
-    //adding methods
     formatCount(){
         const {count} = this.state;
-        return count === 0 ? "Zero":count;
+     //You can also return a jsx expression here
+       return count === 0 ? "Zero":count;
     }
+ 
 }
+
  
 export default Counter;

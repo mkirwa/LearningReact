@@ -5,19 +5,7 @@ class Counter extends Component {
         count: 0
     };
 
-    constructor(){
-        super();
-        //bind method returns a new instance of the handle increment function 
-        //in this function, this is always referencing the current object 
-        //So no matter how that function is called, this is not going to change.
-        //it is always refrencing the current counter object
-        //this method returns a new function, you can get that function and reset
-        //handle increment by equating it to the function that is returned from 
-        //the bind method
-        this.handleIncrement = this.handleIncrement.bind(this);
-    }
-
-    handleIncrement(){
+    handleIncrement = () =>{
         console.log('Increment Clicked',this);
     }
 

@@ -2,22 +2,23 @@ import React, { Component } from 'react';
 //component class has methods that will be inherited in counter class
 class Counter extends Component {
     state = {
-        count: 0
+        value: this.props.value
     };
 
-    handleIncrement = () =>{
+    handleIncrement = (product) =>{
         //setState tells react we are updating the state upon being clicked
         //inside setState, you have to pass an object and the properties of 
-        //that object. In this case count and this.state.count
-        this.setState({count: this.state.count+1});
-    }
-
+        //that object. In this case value and this.state.value
+        console.log(product);
+        this.setState({value: this.state.value + 1});
+    };
+    
     render() { 
         return(
             <div>
                 <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
                 <button 
-                onClick={this.handleIncrement} 
+                onClick={() => this.handleIncrement({id:1})} 
                 className="btn btn-secondary btn-sm">
                     Increment
                 </button>
@@ -27,13 +28,13 @@ class Counter extends Component {
     
     getBadgeClasses() {
         let classes = "badge m2 badge-";
-        classes += this.state.count === 0? "warning" : "primary";
+        classes += this.state.value === 0? "warning" : "primary";
         return classes; 
     }
     formatCount(){
-        const {count} = this.state;
+        const {value} = this.state;
      //You can also return a jsx expression here
-       return count === 0 ? "Zero":count;
+       return value === 0 ? "Zero":value;
     }
  
 }

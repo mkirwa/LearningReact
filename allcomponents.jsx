@@ -22,6 +22,11 @@ class Allcomponents extends Component {
             { id:4, value:0 },
         ]
      };
+     
+    handleDelete = ()=>{
+        console.log("event handler called")
+    }
+
     render() { 
         return ( 
         //this div is the wrapper or the container for allcomponents

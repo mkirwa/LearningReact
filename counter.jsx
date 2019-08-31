@@ -9,7 +9,7 @@ class Counter extends Component {
         //setState tells react we are updating the state upon being clicked
         //inside setState, you have to pass an object and the properties of 
         //that object. In this case value and this.state.value
-        console.log(product);
+        
         this.setState({value: this.state.value + 1});
     };
     

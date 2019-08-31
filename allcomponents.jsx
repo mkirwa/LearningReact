@@ -32,7 +32,8 @@ class Allcomponents extends Component {
         //for uniquely identify elements
         <div>
             {this.state.allcomponents.map(counter => 
-            <Counter key={counter.id} value={counter.value} selected={true} />)}
+            <Counter key={counter.id} value={counter.value} id={counter.id}/>
+            )}
         </div> 
         );
     }

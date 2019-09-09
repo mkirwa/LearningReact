@@ -24,7 +24,8 @@ class Allcomponents extends Component {
      };
      
     handleDelete = (counterId)=>{
-        console.log("event handler called",counterId)
+        const counters = this.state.allcomponents.filter(c => c.id !==counterId);
+        this.setState({ allcomponents: counters})
     }
 
     render() { 

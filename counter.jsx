@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 //component class has methods that will be inherited in counter class
 class Counter extends Component {
     state = {
-        value: this.props.value
+        value: this.props.counter.value
     };
 
     handleIncrement = (product) =>{
@@ -22,7 +22,7 @@ class Counter extends Component {
                 className="btn btn-secondary btn-sm.">
                     Increment
                 </button>
-                <button onClick={ () => this.props.onDelete(this.props.id)} className="btn btn-danger btn-sm m-2">Delete</button>
+                <button onClick={ () => this.props.onDelete(this.props.counter.id)} className="btn btn-danger btn-sm m-2">Delete</button>
             </div>
             );
     }

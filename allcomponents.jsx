@@ -38,7 +38,12 @@ class Allcomponents extends Component {
         //for uniquely identify elements
         <div>
             {this.state.allcomponents.map(counter => 
-            <Counter key={counter.id} onDelete={this.handleDelete} value={counter.value} id={counter.id}/>
+            <Counter 
+                key={counter.id} 
+                onDelete={this.handleDelete} 
+                counter={counter}
+                />
+                
             )}
         </div> 
         );

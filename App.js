@@ -35,7 +35,7 @@ constructor(props){
 
 componentDidMount(){
   //ajax call
-  this.setState({ movies});
+  //this.setState({ movies});
 }
 
 handleIncrement = counter =>{
@@ -76,6 +76,8 @@ handleDelete = (counterId)=>{
 }
 
   render(){
+    //render method
+    console.log('App-rendered');
   return (
     <React.Fragment>
       <NavBar totalCounters={this.state.allcomponents.filter(c => c.value>0).length}/>

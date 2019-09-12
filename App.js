@@ -23,10 +23,19 @@ class App extends Allcomponents{
         { id:4, value:0 },
     ]
  };
-
+//1st lifecycle hooks 
 constructor(props){
     super(props);
     console.log('App-Constructor', this.props);
+}
+
+//2nd lifecycle hooks
+//called after the component is rendered into the DOM
+//this is the perfect place to make Ajax calls to get data from the server
+
+componentDidMount(){
+  //ajax call
+  this.setState({ movies});
 }
 
 handleIncrement = counter =>{

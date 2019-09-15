@@ -75,15 +75,60 @@ class Search extends Component {
 
     render() { 
         return ( 
-        <div>
-            <form onSubmit={this.handleSubmit}>
-                <label>
-                Name:
-                <input type="text" value={this.state.value} onChange={this.handleChange} />
-                </label>
-                <input type="submit" value="Submit" />
-            </form>
-        </div>
+            <form>
+            <TextField
+              name="firstName"
+              hintText="First name"
+              floatingLabelText="First name"
+              value={this.state.firstName}
+              onChange={e => this.change(e)}
+              errorText={this.state.firstNameError}
+              floatingLabelFixed
+            />
+            <br />
+            <TextField
+              name="lastName"
+              hintText="Last Name"
+              floatingLabelText="Last Name"
+              value={this.state.lastName}
+              onChange={e => this.change(e)}
+              errorText={this.state.lastNameError}
+              floatingLabelFixed
+            />
+            <br />
+            <TextField
+              name="username"
+              hintText="Username"
+              floatingLabelText="Username"
+              value={this.state.username}
+              onChange={e => this.change(e)}
+              errorText={this.state.usernameError}
+              floatingLabelFixed
+            />
+            <br />
+            <TextField
+              name="email"
+              hintText="Email"
+              floatingLabelText="Email"
+              value={this.state.email}
+              onChange={e => this.change(e)}
+              errorText={this.state.emailError}
+              floatingLabelFixed
+            />
+            <br />
+            <TextField
+              name="password"
+              hintText="Password"
+              floatingLabelText="Password"
+              value={this.state.password}
+              onChange={e => this.change(e)}
+              errorText={this.state.passwordError}
+              type="password"
+              floatingLabelFixed
+            />
+            <br />
+            <RaisedButton label="Submit" onClick={e => this.onSubmit(e)} primary />
+          </form>
         );
     }
 }

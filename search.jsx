@@ -3,7 +3,19 @@ import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 
 class Search extends Component {
-    state = {  }
+    state = { 
+        firstName: "",
+        firstNameError: "",
+        lastName: "",
+        lastNameError: "",
+        username: "",
+        usernameError: "",
+        email: "",
+        emailError: "",
+        password: "",
+        passwordError: ""
+
+    }
     render() { 
         return ( 
         <div>

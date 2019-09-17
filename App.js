@@ -77,6 +77,7 @@ handleDelete = (counterId)=>{
     this.setState({ allcomponents: counters})
 }
 
+
   render(){
     //render method
     console.log('App-rendered');

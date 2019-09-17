@@ -95,5 +95,4 @@ handleDelete = (counterId)=>{
   );
 }
 }
-
 export default App;

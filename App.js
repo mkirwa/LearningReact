@@ -91,6 +91,16 @@ handleDelete = (counterId)=>{
           onIncrement={this.handleIncrement}
           onDelete={this.handleDelete}
           />
+        <SelectField>
+            floatingLabelText="Select a column"
+            value={}
+            onChange={(event, index, value) => this.setState(value)}
+
+            <MenuItem value="firstName" primaryText="First Name"/>
+            <MenuItem value="lastName" primaryText="Last Name"/>
+            <MenuItem value="email" primaryText="Email"/>
+            <MenuItem value="password" primaryText="Password"/>
+        </SelectField>
       </main>
     </React.Fragment>
   );

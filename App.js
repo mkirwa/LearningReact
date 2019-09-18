@@ -1,8 +1,7 @@
 import React from 'react';
 import NavBar from './components/navbar'
 import Allcomponents from './components/allcomponents';
-import SelectField from 'material-ui/SelectField';
-import MenuItem from 'material-ui/MenuItem';
+
 import './App.css';
 
 class App extends Allcomponents{
@@ -23,9 +22,8 @@ class App extends Allcomponents{
         { id:2, value:0 },
         { id:3, value:0 },
         { id:4, value:0 },
-    ],
-    query:'',
-    columnToQuery:"firstName",
+    ]
+    
  };
 //1st lifecycle hooks 
 constructor(props){
@@ -93,16 +91,7 @@ handleDelete = (counterId)=>{
           onIncrement={this.handleIncrement}
           onDelete={this.handleDelete}
           />
-        <SelectField>
-            floatingLabelText="Select a column"
-            value={}
-            onChange={(event, index, value) => this.setState({columnToQuery: value})}
-
-            <MenuItem value="firstName" primaryText="First Name"/>
-            <MenuItem value="lastName" primaryText="Last Name"/>
-            <MenuItem value="email" primaryText="Email"/>
-            <MenuItem value="password" primaryText="Password"/>
-        </SelectField>
+        
       </main>
     </React.Fragment>
   );

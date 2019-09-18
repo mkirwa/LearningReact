@@ -23,7 +23,9 @@ class App extends Allcomponents{
         { id:2, value:0 },
         { id:3, value:0 },
         { id:4, value:0 },
-    ]
+    ],
+    query:'',
+    columnToQuery:"firstName",
  };
 //1st lifecycle hooks 
 constructor(props){
@@ -94,7 +96,7 @@ handleDelete = (counterId)=>{
         <SelectField>
             floatingLabelText="Select a column"
             value={}
-            onChange={(event, index, value) => this.setState(value)}
+            onChange={(event, index, value) => this.setState({columnToQuery: value})}
 
             <MenuItem value="firstName" primaryText="First Name"/>
             <MenuItem value="lastName" primaryText="Last Name"/>

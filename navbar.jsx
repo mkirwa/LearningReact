@@ -1,14 +1,15 @@
 
 import React, { Component } from 'react';
 
+
+
 class NavBar extends Component {
     
     render() { 
-        const { firstQuery } = this.props;
         return ( 
             
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-            <a class="navbar-brand mr-auto mr-lg-0 " href="#">Home</a>
+            <a class="navbar-brand mr-auto mr-lg-0" href="#">Home</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -36,11 +37,10 @@ class NavBar extends Component {
                 </ul>
             </div>
             
-            <formSearch
-                placeholder="Search"
-                onChangeText={query => { this.setState({ firstQuery: query }); }}
-                value={firstQuery}
-            />
+            <form inline>
+                <button variant="outline-info">Search</button>
+                <button class="btn btn-outline-success my-2 my-sm-0 m-2" type="submit">Search</button>
+            </form>
 
         </nav>
         

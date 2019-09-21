@@ -4,30 +4,31 @@ class formsearch extends Component {
    constructor(props){
        super(props)
        this.state={
-        search:null
+        fullName:null
        }
    }
-    handleSubmit = () =>{
-
+   //this is where you run your API calls
+    handleSubmit = (event) =>{
+        event.preventDefault()
+        const data = this.state
     }
 
-    handleInputChange = () =>{
-
+    handleInputChange = (event) =>{
+        event.preventDefault()
+        this.setState({[event.target.name]:event.target.value})
     }
     render() { 
         const {search} = this.state
         return ( 
-            <div>
-            <h1>Forms and Inputs</h1>        
-            <p>Full name is: {search}</p>
+        <div>
             <form onSubmit={this.handleSubmit} class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="search" aria-label="search">
+                <input class="form-control mr-sm-2" type="text" placeholder="search" aria-label="search" name='fullName' onChange="this.handleInputChange">
                     <div pseudo="placeholder">Search</div>
                     <div contentEditable="plaintext-only"></div>
                 </input>
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
-            </div>
+        </div>
          );
     }
 }

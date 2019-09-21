@@ -1,13 +1,31 @@
 
 import React, { Component } from 'react';
+import formsearch from './formsearch';
 
 
 
 class NavBar extends Component {
+    constructor(props){
+        super(props)
+        this.state={
+         fullName:null
+        }
+    }
+    //this is where you run your API calls
+     handleSubmit = (event) =>{
+         event.preventDefault()
+         const data = this.state
+     }
+ 
+     handleInputChange = (event) =>{
+         event.preventDefault()
+         this.setState({[event.target.name]:event.target.value})
+     }
     
     render() { 
         return ( 
-            
+        
+
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
             <a class="navbar-brand mr-auto mr-lg-0" href="#">Home</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,15 +54,18 @@ class NavBar extends Component {
                 </li>
                 </ul>
             </div>
-            
-            <form inline>
-                <button variant="outline-info">Search</button>
-                <button class="btn btn-outline-success my-2 my-sm-0 m-2" type="submit">Search</button>
-            </form>
 
+            <form class="form-inline my-2 my-lg-0">
+            
+                <input class="form-control mr-sm-2" type="text" placeholder="search" aria-label="search" name='fullName' onChange="this.handleInputChange">
+                    <div pseudo="placeholder">Search</div>
+                    <div contentEditable="plaintext-only"></div>
+                </input>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+               
+            </form>
         </nav>
         
-            
          );
     }
 }

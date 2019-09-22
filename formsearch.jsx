@@ -31,6 +31,5 @@ class formsearch extends Component {
         </div>
          );
     }
-}
- 
+} 
 export default formsearch;

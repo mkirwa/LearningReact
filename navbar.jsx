@@ -71,7 +71,6 @@ class NavBar extends Component {
 }
  
 export default NavBar;
- 
 //Stateless Functional Component
 //const NavBar = ({totalCounters}) =>{
    //return (

@@ -1,6 +1,8 @@
 import React from 'react';
-import NavBar from './components/navbar'
+import NavBar from './components/navbar';
 import Allcomponents from './components/allcomponents';
+import formsearch from './components/formsearch'
+
 
 import './App.css';
 
@@ -29,6 +31,9 @@ class App extends Allcomponents{
 constructor(props){
     super(props);
     console.log('App-Constructor', this.props);
+    this.state={
+      fullName:null
+     }
 }
 
 //2nd lifecycle hooks
@@ -77,13 +82,28 @@ handleDelete = (counterId)=>{
     this.setState({ allcomponents: counters})
 }
 
+handleSubmit = (event) =>{
+  event.preventDefault()
+  const data = this.state
+}
+
+handleInputChange = (event) =>{
+  event.preventDefault()
+  this.setState({[event.target.name]:event.target.value})
+}
+
 
   render(){
     //render method
     console.log('App-rendered');
+    
   return (
+    
     <React.Fragment>
-      <NavBar totalCounters={this.state.allcomponents.filter(c => c.value>0).length}/>
+      <NavBar totalCounters={this.state.allcomponents.filter(c => c.value>0).length} 
+      handleSubmit={this.handleSubmit}
+      handleInputChange={this.handleInputChange}
+      />
       <main className="container">
         <Allcomponents 
           counters={this.state.allcomponents}
@@ -91,7 +111,6 @@ handleDelete = (counterId)=>{
           onIncrement={this.handleIncrement}
           onDelete={this.handleDelete}
           />
-        
       </main>
     </React.Fragment>
   );

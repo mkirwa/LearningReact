@@ -88,12 +88,19 @@ class App extends Allcomponents {
   render() {
     //render method
     console.log("App-rendered");
+    const { search } = this.state;
+
     return (
       <React.Fragment>
         <NavBar
           totalCounters={
             this.state.allcomponents.filter(c => c.value > 0).length
           }
+        />
+
+        <FormSearch
+          handleSubmit={this.handleSubmit}
+          handleInputChange={this.handleInputChange}
         />
 
         <main className="container">

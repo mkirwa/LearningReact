@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "./components/navbar";
 import Allcomponents from "./components/allcomponents";
+import FormSearch from "./components/formsearch";
 import "./App.css";
 
 class App extends Allcomponents {
@@ -74,6 +75,16 @@ class App extends Allcomponents {
     this.setState({ allcomponents: counters });
   };
 
+  handleSubmit = event => {
+    event.preventDefault();
+    const data = this.state;
+  };
+
+  handleInputChange = event => {
+    event.preventDefault();
+    this.setState({ [event.target.name]: event.target.value });
+  };
+
   render() {
     //render method
     console.log("App-rendered");
@@ -84,6 +95,7 @@ class App extends Allcomponents {
             this.state.allcomponents.filter(c => c.value > 0).length
           }
         />
+
         <main className="container">
           <Allcomponents
             counters={this.state.allcomponents}

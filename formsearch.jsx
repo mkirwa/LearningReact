@@ -4,22 +4,22 @@ class formsearch extends Component {
   //This is where you run your API calls to firebase
 
   render() {
-    //this is where const {search } = this.state; was
+    //this is where const {search } = this.state;
     return (
       <div>
-        <form onSubmit={this.handleSubmit} class="form-inline my-2 my-lg-0">
+        <form onSubmit={this.handleSubmit} className="form-inline my-2 my-lg-0">
           <input
-            class="form-control mr-sm-2"
+            className="form-control mr-sm-2"
             type="text"
-            placeholder="search"
+            placeholder="ID Number"
             aria-label="search"
             name="fullName"
-            onChange="this.handleInputChange"
+          ></input>
+
+          <button
+            className="btn btn-outline-success my-2 my-sm-0"
+            type="submit"
           >
-            <div pseudo="placeholder">Search</div>
-            <div contentEditable="plaintext-only"></div>
-          </input>
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
             Search
           </button>
         </form>
@@ -28,3 +28,7 @@ class formsearch extends Component {
   }
 }
 export default formsearch;
+
+//<div contentEditable="plaintext-only">k</div>
+//<div pseudo="placeholder">Search</div>
+//onChange="this.handleInputChange"

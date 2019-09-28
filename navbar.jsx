@@ -22,17 +22,18 @@ class NavBar extends Component {
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
+            <li className="nav-item">
               <a className="nav-link" href="#">
                 Loads<span className="sr-only">(current)</span>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="https://www.facebook.com">
+              <a className="nav-link" href="">
                 View Users
               </a>
             </li>
-            <li className="nav-item dropdown">
+
+            <li className="dropdown-menu" id="dropdown">
               <a
                 className="nav-link dropdown-toggle"
                 href="#"
@@ -45,17 +46,17 @@ class NavBar extends Component {
                 Add User
               </a>
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a className="dropdown-item" href="https://www.facebook.com">
+                <a className="dropdown-item" href="">
                   Driver
                 </a>
-                <a className="dropdown-item" href="https://www.facebook.com">
+                <a className="dropdown-item" href="">
                   Accountant
                 </a>
-                <a className="dropdown-item" href="https://www.facebook.com">
+                <a className="dropdown-item" href="">
                   Dispatch
                 </a>
                 <div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="https://www.facebook.com">
+                <a className="dropdown-item" href="">
                   Something else here
                 </a>
               </div>

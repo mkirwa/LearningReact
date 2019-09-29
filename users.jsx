@@ -1,7 +1,14 @@
-import React from "react";
+import React, { Component } from "react";
 
-const Users = () => {
-  return <h1>Admin Users</h1>;
-};
+class users extends Component {
+  state = {};
+  render() {
+    return (
+      <div>
+        <h1>This is the users page</h1>
+      </div>
+    );
+  }
+}
 
-export default Users;
+export default users;

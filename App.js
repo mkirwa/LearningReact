@@ -134,6 +134,7 @@ class App extends Allcomponents {
           <Route path="/loads" component={Loads} />
           <Route path="/navbar" component={NavBar} />
           <Route path="/users" component={Users} />
+          <Route path="/" component={Home} />
         </div>
       </React.Fragment>
     );

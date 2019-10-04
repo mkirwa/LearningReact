@@ -48,16 +48,16 @@ class NavBar extends Component {
                 Add User
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="/admin">
                   Admin
                 </a>
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="/accountant">
                   Accountant
                 </a>
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="/dispatch">
                   Dispatch
                 </a>
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="/driver">
                   Driver
                 </a>
                 <div class="dropdown-divider"></div>

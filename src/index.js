@@ -1,12 +1,27 @@
-//....object......module
-//importing react makes use of babel
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+//importing bootstrap css into our application
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
-const element = <h1>Hello World</h1>;
-//document.getElementByID specifies where in the real DOM we want 
-//to render this
-//this is plain vanilla javascript 
-//this react DOM gets gets a reference to getElementById
-//and renders element inside of that element
-ReactDOM.render(element,document.getElementById('root'));
+import "bootstrap";
+import "bootstrap/dist/js/bootstrap.js";
+import $ from "jquery";
+import Popper from "popper.js";
+
+ReactDOM.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById("root")
+);
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();

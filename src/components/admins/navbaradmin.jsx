@@ -1,15 +1,17 @@
 import React, { Component } from "react";
 import FormSearch from "../formsearch";
 import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
 //import Dropdown from "./dropdown";
 
 class NavBar extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <a className="navbar-brand mr-auto mr-lg-0" href="#">
+        <Link className="navbar-brand mr-auto mr-lg-0" to="/admins/admin">
           Home
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -25,20 +27,20 @@ class NavBar extends Component {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-              <a className="nav-link" href="/loads">
+              <Link className="nav-link" to="/loads">
                 Loads<span className="sr-only">(current)</span>
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/users">
+              <Link className="nav-link" to="/users">
                 Users
-              </a>
+              </Link>
             </li>
 
             <li class="nav-item dropdown">
-              <a
+              <Link
                 class="nav-link dropdown-toggle"
-                href="#"
+                to="#"
                 id="navbarDropdown"
                 role="button"
                 data-toggle="dropdown"
@@ -46,24 +48,24 @@ class NavBar extends Component {
                 aria-expanded="false"
               >
                 Add User
-              </a>
+              </Link>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="/admins/admin">
+                <Link class="dropdown-item" to="/admins/adduser">
                   Admin
-                </a>
-                <a class="dropdown-item" href="/accountant">
+                </Link>
+                <Link class="dropdown-item" to="/admins/adduser">
                   Accountant
-                </a>
-                <a class="dropdown-item" href="/dispatch">
+                </Link>
+                <Link class="dropdown-item" to="/admins/adduser">
                   Dispatch
-                </a>
-                <a class="dropdown-item" href="/drivers">
+                </Link>
+                <Link class="dropdown-item" to="/admins/adduser">
                   Driver
-                </a>
+                </Link>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">
+                <Link class="dropdown-item" to="#">
                   Something else here
-                </a>
+                </Link>
               </div>
             </li>
           </ul>

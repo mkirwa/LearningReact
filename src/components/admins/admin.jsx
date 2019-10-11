@@ -12,6 +12,7 @@ class Admin extends Component {
     return (
       <div>
         <NavBarAdmin />
+        <h1>Maps should be here </h1>
       </div>
     );
   }
